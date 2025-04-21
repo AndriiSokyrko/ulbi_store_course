@@ -1,11 +1,7 @@
 const Router = require('express')
 const router = new Router()
-
-router.get('/',(req, res)=> {
-    res.json({message: 'brand get'})
-})
-router.post('/',(req, res)=>{
-    res.json({message:'brand post'})
-})
+const brandController = require('../controllers/brandController')
+router.get('/',brandController.getAll)
+router.post('/',brandController.create)
 
 module.exports = router
