@@ -10,7 +10,7 @@ class ApiErrors extends Error{
     static internal(message){
         return new ApiErrors(500,message)
     }
-    static forbide(message){
+    static forbiden(message){
         return new ApiErrors(403,message)
     }
 
